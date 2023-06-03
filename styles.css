@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    height: 2000px;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    gap: 200px;
+    /* background-color: lightgoldenrodyellow; */
+}
+
+.h1 {
+    margin-left: 30px;
+    font-family: pt serif;
+    font-weight: 700;
+    font-size: 26px;
+
+}
+
+.h2, .h3 {
+    font-family: poppins;
+}
+
+.h2 {
+    font-weight: 600;
+}
+
+.h3 {
+    font-weight: 400;
+}
+
+/* Gridding */
+
+.team-grid {
+    display: grid;
+    /* background-color: lightcoral; */
+    grid-template-columns: repeat(3, 238px);
+    grid-template-rows: repeat(2, 341px);
+    justify-content: center;
+    column-gap: 150px;
+    row-gap: 100px;
+}
+
+.team-grid > div > img {
+    width: 100%;
+}
+
+.team-grid > div:nth-child(2n + 2) {
+    margin-top: 60px;
+}
+
+.team-grid > div {
+    margin: 10px;
+}
+
+/* Styling */
+
+.name {
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    bottom: -17%;
+    margin: 0;
+}
+
+.profile, .middle {
+    position: relative;
+}
+
+.middle > .name {
+    bottom: -35%;
+}
+
+.role {
+    font-family: pt serif;
+    font-weight: 400;
+    font-size: 24px;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -45%;
+    top: 10%;
+} 
+
+footer {
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 238px);
+    }
+}
